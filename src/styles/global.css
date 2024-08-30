@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0;
+  padding: 1rem;
   width: 100%;
   max-width: 80ch;
   line-height: 1.5;
