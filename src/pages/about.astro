@@ -7,26 +7,23 @@ const identity = {
   occupation: 'Technical Writer',
   hobbies: ['photography', 'birdwatching', 'baseball'],
 };
+
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs'];
-const skillColor = 'navyblue';
-const fontWeight = 'bold';
+const skillColor = 'green';
+const fontWeight = '700';
 const textCase = 'uppercase';
 const happy = true;
-const finished = false;
 const goal = 3;
+const finished = true;
 ---
 
-<!-- <style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
+<style define:vars={{ skillColor, fontWeight, textCase }}>
   .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
     text-transform: var(--textCase);
   }
-</style> -->
+</style>
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <p>
@@ -56,7 +53,6 @@ const goal = 3;
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
   {happy && <p>I am happy to be learning Astro!</p>}
-  {finished && <p>I finished this tutorial!</p>}
   {
     goal === 3 ? (
       <p>My goal is to finish in 3 days.</p>
@@ -64,4 +60,5 @@ const goal = 3;
       <p>My goal is not 3 days.</p>
     )
   }
+  {finished && <p>I finished this tutorial!</p>}
 </BaseLayout>
